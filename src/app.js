@@ -65,7 +65,6 @@ app.post("/repositories/:id/like", (request, response) => {
   const { id } = request.params
 
   const index = repositories.findIndex(repo => repo.id === id)
-  console.log(`INDEX: ${index}`)
 
   if(index === -1){
     return response.status(400).json({ error: "Repository doesn't exist"})
